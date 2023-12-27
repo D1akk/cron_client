@@ -24,6 +24,7 @@
         v-model="password"
         type="password"
         placeholder="Придумайте пароль"
+        name="password"
       />
       <small v-if="errors.password">{{ errors.password }}</small>
     </div>
@@ -33,6 +34,7 @@
         v-model="password2"
         type="password"
         placeholder="Повторите пароль еще раз"
+        name="password2"
       />
       <small v-if="errors.password2">{{ errors.password2 }}</small>
     </div>
