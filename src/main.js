@@ -5,5 +5,5 @@ import "./assets/styles/style.css";
 import axios from "axios";
 import store from "./store";
 
-axios.defaults.baseURL = "https://superpuperuserposer.pythonanywhere.com/";
+axios.defaults.baseURL = "https://superpuperuserposer.pythonanywhere.com";
 createApp(App).use(store).use(router, axios).mount("#app");
