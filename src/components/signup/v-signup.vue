@@ -6,31 +6,38 @@
           <h1 class="home-title">Регистрация</h1>
         </div>
         <p class="home-top-p">Для входа в приложение</p>
-        
       </div>
     </div>
   </div>
   <form @submit.prevent="submitForm" class="form">
-          <div v-if="errors.wrong_credentials">
-            <small>{{ errors.wrong_credentials }}</small>
-          </div>
-          <div class="input-container"> 
-            ФИО
-            <input v-model="username" placeholder="Введите ваше имя" />
-            <small v-if="errors.username">{{ errors.username }}</small>
-          </div>
-          <div class="input-container"> 
-            Пароль
-            <input v-model="password" type="password" placeholder="Придумайте пароль" />
-            <small v-if="errors.password">{{ errors.password }}</small>
-          </div>
-          <div class="input-container" >
-            Повторите пароль
-            <input v-model="password" type="password" placeholder="Повторите пароль еще раз" />
-            <small v-if="errors.password2">{{ errors.password2 }}</small>
-          </div>
-          <button type="submit" @click="login" class="submit">Зарегистрироваться</button>
-        </form>
+    <div v-if="errors.wrong_credentials">
+      <small>{{ errors.wrong_credentials }}</small>
+    </div>
+    <div class="input-container">
+      ФИО
+      <input v-model="username" placeholder="Введите ваше имя" />
+      <small v-if="errors.username">{{ errors.username }}</small>
+    </div>
+    <div class="input-container">
+      Пароль
+      <input
+        v-model="password"
+        type="password"
+        placeholder="Придумайте пароль"
+      />
+      <small v-if="errors.password">{{ errors.password }}</small>
+    </div>
+    <div class="input-container">
+      Повторите пароль
+      <input
+        v-model="password2"
+        type="password"
+        placeholder="Повторите пароль еще раз"
+      />
+      <small v-if="errors.password2">{{ errors.password2 }}</small>
+    </div>
+    <button type="submit" class="submit">Зарегистрироваться</button>
+  </form>
 </template>
 
 <script>
