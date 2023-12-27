@@ -63,13 +63,11 @@ export default {
       let valid = true;
       if (!this.username) {
         this.errors.username = "Поле не может быть пустым";
-        valid = false;
       } else {
         this.errors.username = "";
       }
       if (!this.password) {
         this.errors.password = "Поле не может быть пустым";
-        valid = false;
       } else {
         this.errors.password = "";
       }
@@ -109,6 +107,8 @@ export default {
               this.errors.username = "";
             }
           });
+      } else {
+        alert("Что-то пошло не так...");
       }
     },
   },
